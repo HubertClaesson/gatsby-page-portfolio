@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Nokora:wght@700&family=Noto+Sans+JP:wght@300&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: rgb(137, 176, 163);
+}
+
+.footerpusher {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.nav {
+  width: 100vw;
+  height: 4em;
+  font-size: 16px;
+  font-weight: 300;
+  background-color: rgb(137, 176, 163);
+  display: flex;
+}
+
+.nav ul {
+  display: flex;
+  gap: 0.8em;
+  margin-bottom: 0;
+  align-self: center;
+}
+
+.nav li {
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.line {
+  width: 100vw;
+  height: 4em;
+  background-color: rgb(176, 166, 137);
+}
+
+/* bannerstyling for all pages */
+
+.auther {
+  font-weight: 300;
+}
+
+.pagetitle {
+  font-weight: 300;
+}
+
+.headerwrap {
+  margin: 0.5em 0em 2em 2em;
+}
+
+/* homepage */
+
+.headerbannerHome {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.flexcontainerHome {
+  display: flex;
+  justify-content: center;
+  margin: 6em 10em;
+}
+
+.contentwrapHome {
+  max-width: 700px;
+  display: flex;
+  gap: 3em;
+  align-items: center;
+}
+
+.heroimghome {
+  width: 300px;
+  height: 288px;
+}
+
+.textContentHome {
+  max-width: 400px;
+  align-self: center;
+}
+
+.richtextHome {
+  max-width: 400px;
+}
+
+.richtextHomeCard {
+  background-color: pink;
+  height: 200px;
+  margin-top: 3em;
+  padding: 0.5em;
+}
+
+/* Styling for all buttons */
+
+.buttonLink {
+  background-color: #d9d9d9;
+  border: none;
+}
+
+.buttonLink a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+@media (max-width: 450px) {
+  .contentwrapHome {
+    flex-direction: column;
+  }
+  .nav {
+    justify-content: center;
+  }
+
+  .nav ul {
+    padding-left: 0;
+  }
+  .richtext {
+    width: 300px;
+  }
+
+  .aboutContentWrap {
+    margin-inline: 1em;
+  }
+
+  /* class to make flexbox responsive */
+  .flexdirection {
+    flex-direction: column;
+  }
+}
+
+/* profoliopage styling */
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-rows: auto 1fr;
+  place-items: center;
+  margin-bottom: 2em;
+  border: solid yellow;
+}
+
+.imgGrid {
+  max-width: 350px;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 3px;
+  margin-bottom: 0.3em;
+}
+
+.headerLinkPost a {
+  text-decoration: none;
+  color: black;
+}
+.headerLinkPost a:hover {
+  text-decoration: none;
+  color: rgb(77, 70, 70);
+}
+
+.aboutProjectText {
+  max-width: 340px;
+}
+
+.aboutProjectText:hover {
+  max-width: 350px;
+  background-color: rgb(230, 243, 247);
+}
+
+/* single project page */
+
+.flexContainerSingleProject {
+  display: flex;
+  justify-content: center;
+}
+
+.contentWrapSingleProject {
+  max-width: 700px;
+  margin-bottom: 4em;
+  padding: 0.8em;
+}
+
+.richtextSingleProject {
+  max-width: 100%;
+  padding: 0.4em;
+  background-color: aliceblue;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.headerSingleProject {
+  font-weight: 300;
+}
+
+.heroImageSingleProjectPage {
+  width: 100%;
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
+}
+
+/* AboutPage */
+
+.aboutFlexContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutContentWrap {
+  max-width: fit-content;
+  margin: 4em 4em;
+}
+
+.TextAndImageContainer {
+  display: flex;
+  gap: 3em;
+}
+
+.aboutHeroimg {
+  max-width: 400px;
+  height: 350px;
+}
+
+.richtextAbout {
+  max-width: 380px;
+  align-self: center;
+}
+
+.cardWrap {
+  background-color: rgb(255, 247, 247);
+  margin-top: 10em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.richtextAboutList {
+  margin: 1.4em;
+}
+
+.CVwrap {
+  max-width: 400px;
+  background-color: antiquewhite;
+  align-self: center;
+  margin: 1.4em;
+}
+
+.CVContent {
+  margin: 0.5em;
+}
+
+/* contactpage */
+
+.heroimgContact {
+  max-width: 600px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.contactinfowrap {
+  max-width: 300px;
+  margin: 3em;
+}
+
+.buttonwrap {
+  display: flex;
+  gap: 0.4em;
+}
+
+/* Footer styling */
+
+.footer {
+  width: 100vw;
+  height: 3em;
+  font-size: 19px;
+  color: rgb(0, 0, 0);
+  background-color: aliceblue;
+  display: flex;
+  margin-top: auto;
+  justify-content: center;
+}
+
+.footerwrap {
+  display: flex;
+  gap: 0.6em;
+  margin-bottom: 0;
+  align-self: center;
+}
+
+.footerContent {
+  display: flex;
+  align-self: center;
+  gap: 0.5em;
+  margin-bottom: 0;
+}
+
+.footerAuthor {
+  margin-bottom: 0;
+}
+
+.loggo {
+  fill: aliceblue;
+  background-color: aliceblue;
+}
+
+/* 404 page styling */
+
+.pageNotFoundFlex {
+  display: flex;
+  justify-content: center;
+  margin: 5em 10em;
+}
+
+.PageNotfoundText {
+  font-size: 22px;
+}
