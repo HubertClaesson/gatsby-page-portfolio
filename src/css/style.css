@@ -43,12 +43,6 @@ body {
   color: rgb(0, 0, 0);
 }
 
-.line {
-  width: 100vw;
-  height: 4em;
-  background-color: rgb(176, 166, 137);
-}
-
 /* bannerstyling for all pages */
 
 .auther {
@@ -143,7 +137,7 @@ body {
   }
 }
 
-/* profoliopage styling */
+/* profolio page styling */
 
 .gridContainer {
   display: grid;
@@ -151,7 +145,6 @@ body {
   grid-template-rows: auto 1fr;
   place-items: center;
   margin-bottom: 2em;
-  border: solid yellow;
 }
 
 .imgGrid {
