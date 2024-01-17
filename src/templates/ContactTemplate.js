@@ -4,10 +4,12 @@ import { INLINES, BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { Link } from "gatsby"
 import useMetaData from "../hooks/useMetaData"
+import useSocialLinks from "../hooks/useSocialLinks"
 import { Helmet } from "react-helmet"
 
 const ContactTemplate = props => {
   const metaData = useMetaData()
+  const socialLink = useSocialLinks()
 
   const richTextConfig = {
     renderMark: {
@@ -45,14 +47,16 @@ const ContactTemplate = props => {
       />
       <article className="contactinfowrap">
         <div>{renderRichText(props.content, richTextConfig)}</div>
-        <div className="buttonwrap">
-          <button className="buttonLink">
-            <Link to={props.linkedinLink}>{props.linkedIntitle}</Link>
-          </button>
-          <button className="buttonLink">
-            <Link to={props.githubLink}>{props.githubtitle}</Link>
-          </button>
-        </div>
+        {socialLink.map(social => (
+          <div buttonwrap className="buttonwrap" key={social.node.id}>
+            <button className="buttonLink">
+              <Link to={social.node.linkedInLink}>{props.linkedIntitle}</Link>
+            </button>
+            <button className="buttonLink">
+              <Link to={social.node.githubLink}>{props.githubtitle}</Link>
+            </button>
+          </div>
+        ))}
       </article>
     </>
   )
