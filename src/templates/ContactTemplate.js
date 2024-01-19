@@ -8,7 +8,9 @@ import useSocialLinks from "../hooks/useSocialLinks"
 import { Helmet } from "react-helmet"
 
 const ContactTemplate = props => {
+  // Hook to fetch meta data from gatsby-config.js
   const metaData = useMetaData()
+  // Hook to fetch links and icons for LinkedIn and Github
   const socialLink = useSocialLinks()
 
   const richTextConfig = {
